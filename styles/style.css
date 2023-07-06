@@ -7,6 +7,7 @@ h3,
 h4,
 h5,
 h6,
+a,
 p,
 ol,
 ul,
@@ -19,7 +20,8 @@ legend {
   margin: 0;
   padding: 0;
   list-style: none;
-
+  text-decoration: none;
+  color: inherit;
   font-family: 'Poppins', sans-serif;
 
 }
@@ -46,7 +48,7 @@ button {
   color: #fff;
 }
 
-body{
+body {
   background-color: #F6F6F6;
 }
 
@@ -119,7 +121,7 @@ body{
 }
 
 .container-card-profire {
-  max-width: 210px;
+  max-width: 200px;
 
 }
 
@@ -132,44 +134,42 @@ body{
   background-color: aqua;
   display: flex;
   flex-direction: row;
+  height: 100%;
   width: 540px;
 }
 
 .card-description {
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card-description h2 {
   color: #000;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.card-description .card-description-title{
+.card-description .card-description-title {
   display: flex;
   gap: 10px;
   flex-direction: row;
 }
 
-.card-description .card-description-title h3{
+.card-description .card-description-title h3 {
   color: #000;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .card-description .card-description-obj {
-background-color: #EFEFEF;
-border-radius: 10px;
-margin-top: 10px;
-
-padding: 10px;
-}
-
-.card-description .o button {
-  /* margin-top: auto; */
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 /* footer */
@@ -178,30 +178,47 @@ footer {
   background-color: var(--color-blue);
   color: var(--color-white);
   margin-top: 80px;
-  
+
 }
 
 footer span {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.sidebar {
-  width: 250px;
-  height: 100%;
-  background-color: #f2f2f2;
-  color: #333;
-  margin-right: 20px;
-  padding: 20px;
-  transition: width 0.3s ease;
+footer .title-footer {
+  font-size: 20px;
+  line-height: 40px;
 }
 
-.sidebar a {
-  color: #333;
-  text-decoration: none;
+@media (min-width: 1420px) {
+
+  .card {
+    width: 540px !important;
+  }
+
 }
 
-.sidebar a:hover {
-  color: #ff0000;
+@media (max-width: 650px){
+  .container-img img {
+    display: none;
+  }
+
+  .content-main {
+    margin-top: 80px;
+    
+  }
+}
+
+@media (max-width: 530px)
+{
+  .container-card-profire img{
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+  }
 }
